@@ -22,9 +22,9 @@ inline utils::fasta read_from(std::string file_path) {
 // 将比对拆分为左右部分和中间部分（去掉gap）
 inline void locate_middle_part(size_t& left_idx, size_t& right_idx, const std::vector<std::string>& alignment, const std::vector<int>& col_status) {
     // 初始值为超出范围，表示未找到第一个1
-    left_idx = col_status.size();
+    left_idx = 0;
     // 初始值为超出范围，表示未找到最后一个1
-    right_idx = col_status.size();
+    right_idx = col_status.size() - 1;
 
     // 单次遍历查找第一个和最后一个1的索引
     for (size_t i = 0; i < col_status.size(); ++i) {
