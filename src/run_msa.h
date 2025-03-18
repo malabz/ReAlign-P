@@ -20,6 +20,7 @@ namespace utils
         {}
         void run_muscle5() const;
         void run_muscle3() const;
+        void run_fftnsi() const;
     };
 }
 

@@ -81,6 +81,20 @@ inline void split_alignment(size_t left_idx, size_t right_idx, std::vector<std::
     alignment = head_alignment;
 }
 
-
+inline void displayHelp() {
+    std::cout << "Usage: ./realign_p -i <input_file> [-o <output_file>] [-s <score_matrix>] [-l <length>] [-m <msa>]" << std::endl;
+    std::cout << "\nOptions:\n";
+    std::cout << "  -i <input_file>    (required) Path to the input file containing sequence data.\n";
+    std::cout << "  -o <output_file>   (optional) Path to the output file for storing results. Default is 'realign_p_result.fasta'.\n";
+    std::cout << "  -s <score_matrix>   (optional) Score matrix to use, options are 'blosum62' or 'pam250'. Default is blosum62.\n";
+    std::cout << "  -m <msa>           (optional) MSA tool to use, options are 'mafft' or 'muscle5'. Default is 'muscle5'.\n";
+    std::cout << "\nExamples:\n";
+    std::cout << "  ./realign_p -i data.fasta -o results.fasta -s pam250 -m mafft\n";
+    std::cout << "  ./realign_p -i data.fasta -m muscle5\n";
+    std::cout << "\nNote:\n";
+    std::cout << "  - The '-i' option is required.\n";
+    std::cout << "  - The '-m' option only supports 'mafft', and 'muscle5'.\n";
+//    std::cout << "  - If '-w' or '-l' are not provided, default values of 10 and 5 will be used respectively.\n";
+}
 
 #endif //REFINE_P_UTILS_H

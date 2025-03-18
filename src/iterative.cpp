@@ -1,5 +1,7 @@
 #include "iterative.h"
 
+std::string used_msa;
+
 void preprocess(const std::vector<std::string>& identifications, const std::vector<std::string>& sequences,
                 utils::fasta& realigned_fasta)
 {
@@ -44,7 +46,14 @@ void preprocess(const std::vector<std::string>& identifications, const std::vect
 
     // 使用 MUSCLE 重新比对
     utils::run_msa msa(input_name, output_name);
-    msa.run_muscle3();
+    if (used_msa == "mafft")
+    {
+        msa.run_fftnsi();
+    }
+    if (used_msa == "muscle5")
+    {
+        msa.run_muscle5();
+    }
 
     // 读取重新比对后的数据
     realigned_fasta = read_from(output_name);

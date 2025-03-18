@@ -9,6 +9,8 @@
 #include "score.h"
 #include "run_msa.h"
 
+extern std::string used_msa;
+
 bool is_all_gaps(const std::string& seq);
 
 std::vector<std::string> remove_dashes(const std::vector<std::string>& strings);
