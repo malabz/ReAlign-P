@@ -44,7 +44,21 @@ make
 
 ### 2 Usage
 ```
+Usage: ./realign_p -i <input_file> [-o <output_file>] [-s <score_matrix>] [-l <length>] [-m <msa>]
 
+Options:
+  -i <input_file>    (required) Path to the input file containing sequence data.
+  -o <output_file>   (optional) Path to the output file for storing results. Default is 'realign_p_result.fasta'.
+  -s <score_matrix>   (optional) Score matrix to use, options are 'blosum62' or 'pam250'. Default is blosum62.
+  -m <msa>           (optional) MSA tool to use, options are 'mafft' or 'muscle5'. Default is 'muscle5'.
+
+Examples:
+  ./realign_p -i data.fasta -o results.fasta -s pam250 -m mafft
+  ./realign_p -i data.fasta -m muscle5
+
+Note:
+  - The '-i' option is required.
+  - The '-m' option only supports 'mafft', and 'muscle5'.
 ```
 
 ## 🔬Test dataset and the use case
@@ -56,7 +70,7 @@ OXBench|395|8.33|138.58
 PREFAB4|1682|45.19|233.51
 SABRE|423|5.72|171.22
 
-### 2. The use case
+<!-- ### 2. The use case
 ```shell
 # Download data
 wget http://lab.malab.cn/soft/ReAlign-N/data/16s_like.tar.gz
@@ -69,7 +83,7 @@ cd 16s_like
 
 # Run ReAlign-P
 
-```
+``` -->
 
 ## 📍Reminder
 1. Currently ReAlign-P is **ONLY** available for Protein. 

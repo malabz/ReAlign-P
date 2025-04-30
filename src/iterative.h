@@ -4,6 +4,9 @@
 #include <filesystem>
 #include <ctime>
 #include <fstream>
+#include <algorithm>  // For std::all_of, std::remove
+#include <vector>     // For std::vector
+#include <string>     // For std::string
 #include "fasta.h"
 #include "utils.h"
 #include "score.h"
