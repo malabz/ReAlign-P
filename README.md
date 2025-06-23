@@ -4,7 +4,7 @@ ReAlign-P is a tool written in C++17 for realigning the protein multiple sequenc
 
 ## 🔨Installation and Usage
 
-<!-- ### 1.1 Linux/WSL(Windows Subsystem for Linux ) - from Anaconda
+### 1.1 Linux/WSL(Windows Subsystem for Linux ) - from Anaconda
 1.Install WSL for Windows. Instructional video [1](https://www.youtube.com/watch?v=X-DHaQLrBi8&t=5s) or [2](http://lab.malab.cn/%7Etfr/1.mp4) (Copyright belongs to the original work).
 
 2.Download and install Anaconda. Download Anaconda for different systems [here](https://www.anaconda.com/products/distribution#Downloads). Instructional video of anaconda installation [1](https://www.youtube.com/watch?v=AshsPB3KT-E) or [2](http://lab.malab.cn/%7Etfr/Install_anaconda_in_Linux.mp4) (Copyright belongs to the original work).
@@ -23,9 +23,9 @@ conda install -c malab realign_p
 
 #4 Test ReAlign-P
 realign_p -h
-``` -->
+```
 
-### 1.1 Linux/WSL(Windows Subsystem for Linux ) - from the source code
+### 1.2 Linux/WSL(Windows Subsystem for Linux ) - from the source code
 
 1.Download and Compile the source code. (Make sure your version of gcc >= 9.4.0)
 ```shell
@@ -40,6 +40,15 @@ make
 
 #4 Test ReAlign-P
 ./realign_p -h
+```
+
+2.Install the required alignment tools mafft and muscle5, we recommend using Conda to install.
+```shell
+# 1 Create and activate a conda environment for msa
+conda create -n msa
+conda activate msa
+# 2 Install mafft and muscle
+conda install -c bioconda mafft muscle=5.2
 ```
 
 ### 2 Usage
@@ -95,6 +104,13 @@ System|GCC version
 :---:|:---:
 Linux|GCC 9.4.0
 WSL|GCC 9.4.0
+
+## 🙏References & Acknowledgements
+We would like to acknowledge the following msa tools that contributed to the development of ReAlign-P:
+
+- **[MAFFT](https://mafft.cbrc.jp/alignment/server/index.html)**: This is a widely used multiple sequence alignment tool known for its high accuracy and scalability.
+
+- **[MUSCLE5](https://www.drive5.com/muscle/)**: This is a novel algorithm which constructs an ensemble of high-accuracy alignment with diverse biases by perturbing a hidden Markov model and permuting its guide tree. 
 
 ## 🔖Citation
 
