@@ -113,6 +113,9 @@ We would like to acknowledge the following msa tools that contributed to the dev
 - **[MUSCLE5](https://www.drive5.com/muscle/)**: This is a novel algorithm which constructs an ensemble of high-accuracy alignment with diverse biases by perturbing a hidden Markov model and permuting its guide tree. 
 
 ## 🔖Citation
+If you use this software, please cite:
+
+Zhai Y, Zhang P, Zou Q, et al. ReAlign-P: a vertical iterative realignment method for protein multiple sequence alignment[J]. Bioinformatics, 2025, 41(8): btaf421.
 
 ## 👋Contacts
 The software tools are developed and maintained by 🧑‍🏫[ZOU's lab](http://lab.malab.cn/~zq/en/index.html).
